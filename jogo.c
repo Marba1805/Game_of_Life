@@ -1,7 +1,7 @@
 int main(){
-    int const larg = 100; //largura
-    int const alt = 100; //altura
-    int const cicl = 1000; //ciclo
+    int const larg = 15; //largura
+    int const alt = 15; //altura
+    int const cicl = 50; //ciclo
     int grad[alt][larg]; //grade
     int temp[alt][larg]; //temporaria
 
