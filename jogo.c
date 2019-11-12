@@ -1,6 +1,6 @@
 /*
 feito por Abram grossmann TIA 31826131
-          Thais Yuri Saito TIA
+          Thais Yuri Saito TIA 31847285
 */
 int main(){
     int const larg = 15; //largura
