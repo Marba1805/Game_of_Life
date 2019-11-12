@@ -13,11 +13,11 @@ int main(){
         }
     }
 
-    int i;
-    int x;
-    int y;
+    int a;
+    int b;
+    int c;
     int neighbours;
-    for(i = 0; i < CYCLES; i++){
+    for(a = 0; a < CYCLES; a++){
         for(row = 0; row < HEIGHT; row++){
             for(col = 0; col < WIDTH; col++){
                 temp[row][col] = 0;
@@ -26,9 +26,9 @@ int main(){
         for(row = 0; row < HEIGHT; row++){
             for(col = 0; col < WIDTH; col++){
                 neighbours = 0;
-                for(y = -1; y < 2; y++){
-                    for(x = -1; x < 2; x++){
-                        if(x != 0 && y != 0 && grid[(row + y) % HEIGHT][(col + x) % WIDTH] == 1){
+                for(c = -1; c < 2; c++){
+                    for(b = -1; b < 2; b++){
+                        if(b != 0 && c != 0 && grid[(row + c) % HEIGHT][(col + b) % WIDTH] == 1){
                             neighbours++;
                         }
                     }
