@@ -2,14 +2,14 @@ int main(){
     int const larg = 100; //largura
     int const alt = 100; //altura
     int const cicl = 1000; //ciclo
-    int grid[alt][larg];
-    int temp[alt][larg];
+    int grad[alt][larg]; //grade
+    int temp[alt][larg]; //temporaria
 
     int linha; //linha
     int col; //coluna
     for(linha = 0; linha < alt; linha++){
         for(col = 0; col < larg; col++){
-            grid[linha][col] = 0;
+            grad[linha][col] = 0;
         }
     }
 
@@ -28,18 +28,18 @@ int main(){
                 neighbours = 0;
                 for(c = -1; c < 2; c++){
                     for(b = -1; b < 2; b++){
-                        if(b != 0 && c != 0 && grid[(linha + c) % alt][(col + b) % larg] == 1){
+                        if(b != 0 && c != 0 && grad[(linha + c) % alt][(col + b) % larg] == 1){
                             neighbours++;
                         }
                     }
                 }
-                if(grid[linha][col] == 1){
+                if(grad[linha][col] == 1){
                     if(neighbours < 2 || neighbours > 3){
                         temp[linha][col] = 0;
                     }else{
                         temp[linha][col] = 1;
                     }
-                    else if(grid[linha][col] == 0){
+                    else if(grad[linha][col] == 0){
                           if(neighbours == 3){
                             temp[linha][col] = 0;
                          }else{
@@ -50,8 +50,8 @@ int main(){
         }
         for(linha = 0; linha < alt; linha++){
             for(col = 0; col < larg; col++){
-                grid[linha][col] = temp[linha][col];
-                printf("%d", grid[linha][col]);
+                grad[linha][col] = temp[linha][col];
+                printf("%d", grad[linha][col]);
             }
             printf("\n");
         }
