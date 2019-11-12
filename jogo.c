@@ -39,13 +39,13 @@ int main(){
                     }else{
                         temp[row][col] = 1;
                     }
-                }else if(grid[row][col] == 0){
-                    if(neighbours == 3){
-                        temp[row][col] = 0;
-                    }else{
-                        temp[row][col] = 1;
-                    }
-                }
+                    else if(grid[row][col] == 0){
+                          if(neighbours == 3){
+                            temp[row][col] = 0;
+                         }else{
+                              temp[row][col] = 1;
+                           }
+                      }        
             }
         }
         for(row = 0; row < HEIGHT; row++){
