@@ -1,3 +1,7 @@
+/*
+feito por Abram grossmann TIA 31826131
+          Thais Yuri Saito TIA
+*/
 int main(){
     int const larg = 15; //largura
     int const alt = 15; //altura
