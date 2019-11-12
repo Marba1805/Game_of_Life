@@ -1,5 +1,5 @@
 /*
-feito por Abram grossmann TIA 31826131
+feito por Abram Grossmann TIA 31826131
           Thais Yuri Saito TIA 31847285
 */
 int main(){
@@ -16,11 +16,10 @@ int main(){
             grad[linha][col] = 0;
         }
     }
-
     int a;
     int b;
     int c;
-    int neighbours;
+    int viz; //vizinho
     for(a = 0; a < cicl; a++){
         for(linha = 0; linha < alt; linha++){
             for(col = 0; col < larg; col++){
@@ -29,22 +28,22 @@ int main(){
         }
         for(linha = 0; linha < alt; linha++){
             for(col = 0; col < larg; col++){
-                neighbours = 0;
+                viz = 0;
                 for(c = -1; c < 2; c++){
                     for(b = -1; b < 2; b++){
                         if(b != 0 && c != 0 && grad[(linha + c) % alt][(col + b) % larg] == 1){
-                            neighbours++;
+                            viz++;
                         }
                     }
                 }
                 if(grad[linha][col] == 1){
-                    if(neighbours < 2 || neighbours > 3){
+                    if(viz < 2 || viz > 3){
                         temp[linha][col] = 0;
                     }else{
                         temp[linha][col] = 1;
                     }
                     else if(grad[linha][col] == 0){
-                          if(neighbours == 3){
+                          if(viz == 3){
                             temp[linha][col] = 0;
                          }else{
                               temp[linha][col] = 1;
