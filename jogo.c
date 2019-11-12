@@ -43,21 +43,22 @@ int main(){
                         temp[linha][col] = 1;
                     }
                     else if(grad[linha][col] == 0){
-                          if(viz == 3){
+                        if(viz == 3){
                             temp[linha][col] = 0;
-                         }else{
-                              temp[linha][col] = 1;
-                           }
-                      }        
-            }
-        }
-        for(linha = 0; linha < alt; linha++){
-            for(col = 0; col < larg; col++){
-                grad[linha][col] = temp[linha][col];
-                printf("%d", grad[linha][col]);
-            }
-            printf("\n");
-        }
-        printf("\n");
-    }
+                        }else{
+                            temp[linha][col] = 1;
+                        }
+                    }        
+               }
+          }
+          for(linha = 0; linha < alt; linha++){
+               for(col = 0; col < larg; col++){
+                    grad[linha][col] = temp[linha][col];
+                    printf("%d", grad[linha][col]);
+               }
+               printf("\n");
+          }
+          printf("\n");
+     }
+              
 }
